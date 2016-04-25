@@ -258,10 +258,23 @@
 	width:140px;
 	height:140px;
 	border:1px solid #ccc;	
-	line-height:200px;
-	text-align:center;
 	border-radius:4px;
 	cursor:pointer;
+	position:relative;
+	overflow:hidden;
+	line-height:140px;
+}
+.uploadBtn img{
+	width:100%
+}
+.uploadBtn u{
+	position:absolute;
+	top:45%;
+	width:100%;
+	text-align:center;
+	z-index:22;
+	line-height: normal;
+	left:0;
 }
 .ui-btn4{
 	background:#7AA8DF;
