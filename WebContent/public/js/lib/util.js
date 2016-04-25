@@ -391,3 +391,49 @@ function hideTip(e){
 	var $e=$(e.currentTarget);
 	$e.siblings(".tooltip").hide();
 }
+
+//权限提示1
+function showError1(){
+	var grayBg=$(".grayBg");
+	var body=$("body");
+	var errorTip=$(".errorTip");
+	var errorTipHtml='<div class="errorTipWrap dialog"><div><i class="icon-02" onclick="hideDialog(this)"></i><h2>抱歉~!此功能仅限设计师</h2><div class="solidline"></div><span>找货功能目前仅限设计师使用</span><p class="red" onclick="toCenter()">返回商家中心看看吧&#62;&#62;</p></div></div>';
+	if(grayBg.length>0){
+		grayBg.show();
+	}else{
+		body.append("<div class='grayBg'></div>");
+	}
+	if(errorTip.length>0){
+		errorTip.show();
+	}else{
+		body.append(errorTipHtml);
+	}
+}
+
+//返回商家中心事件
+function toCenter(){
+	window.location.href="";
+}
+
+//权限提示2
+function showError2(){
+	var grayBg=$(".grayBg");
+	var body=$("body");
+	var errorTip=$(".errorTip");
+	var errorTipHtml='<div class="errorTipWrap dialog"><div><i class="icon-02" onclick="hideDialog(this)"></i><h2>抱歉~!此功能仅限商家</h2><div class="solidline"></div><span>接单功能目前仅限于商家使用</span><p class="red" onclick="toIndex()">返回首页看看吧&#62;&#62;</p></div></div>';
+	if(grayBg.length>0){
+		grayBg.show();
+	}else{
+		body.append("<div class='grayBg'></div>");
+	}
+	if(errorTip.length>0){
+		errorTip.show();
+	}else{
+		body.append(errorTipHtml);
+	}
+}
+
+//返回首页事件
+function toIndex(){
+	window.location.href="index.html"
+}

@@ -17,6 +17,14 @@
 	font-size:14px;
 	color:#D2D2D2;
 }
+.uploadTip>div{
+	cursor:pointer;
+}
+.uploadTip>div:hover .tooltip{
+	display:block;
+	width:240px;
+	text-align:left;
+}
 #uploadBlock{
 	width:192px;
 	height:192px;
@@ -89,8 +97,8 @@
 	cursor:pointer;
 }
 #wookmarkContainer li:hover{
-	box-shadow:0 0 3px #6078EA;
-	border:1px solid #6078EA;
+	box-shadow:0 0 3px #ccc;
+	border:1px solid #ccc;
 }
 #wookmarkContainer .ui-btn1{
 	position:absolute;

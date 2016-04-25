@@ -628,3 +628,99 @@ select{
     border-bottom: 10px solid #ccc;
     top: 0;
 }
+.errorTipWrap{
+	height:210px;
+	margin-top:-105px;
+}
+.errorTipWrap h2{
+	text-align:center;
+	font-size:30px;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+.errorTipWrap .solidline{
+	width:280px;
+	margin:0 auto;
+}
+.errorTipWrap>div>span{
+	background: #fff none repeat scroll 0 0;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: -11px;
+    width: 200px;
+    color:#B2B2B2;
+    font-size:13px;
+}
+.errorTipWrap p{
+	position:absolute;
+	bottom:16px;
+	right:26px;
+	font-size:14px;
+	cursor:pointer;
+	margin-top:50px;
+}
+.sidenav{
+	position:fixed;
+	right:20px;
+	top:50%;
+}
+.sidenav>ul>li{
+    position: relative;
+    text-align: center;
+    width: 75px;
+    height:75px;
+}
+.sidenav>ul>li>a{
+	display:block;
+	color:#ccc;
+}
+.sidenav>ul>li>a span{
+	display:block;
+}
+.sidenav>ul>li>a i{
+	font-size:30px;
+	line-height: 48px;
+}
+.sidenav li>div.tooltip{
+	text-align:center;
+	right:75px;
+	width:248px;
+	height:230px;
+}
+.sidenav li>div.tooltip>div{
+	position:absolute;
+	width:100%;
+	top:-32px;
+	left:0;
+}
+.sidenav li>div.tooltip img{
+	width:62px;
+	height:62px;
+	border-radius:50%;
+}
+.sidenav li>div.tooltip .btn{
+	margin:20px auto;
+	line-height:40px;
+	display:block;
+	width:120px;
+	font-size:15px;
+}
+.sidenav li>div.tooltip h3{
+	margin:5px auto;
+	width:140px;
+	text-align:left;
+}
+.sidenav li>div.tooltip ul{
+	margin:0 auto;
+	width:140px;
+	line-height:26px;
+	text-align:left;
+}
+.sidenav li>div.tooltip p{
+	margin-top:5px;
+}
+.sidenav li:hover>div.tooltip{
+	display:block;
+}
