@@ -1,0 +1,152 @@
+@charset='utf-8';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+body {
+	line-height: 1;
+	color:#333;
+	font:12px/20px "Microsoft Yahei","宋体",Tahoma,Verdana,Arial,Helvetica,sans-serif;
+}
+html,body{
+	height:100%;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+audio,canvas,video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a{
+	text-decoration:none;
+	cursor:pointer;
+}
+img {
+	border:0;
+	vertical-align:middle;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, select {
+    vertical-align:middle;
+    font-family:"Microsoft Yahei"
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+ 
+sup {
+    top: -0.5em;
+}
+ 
+sub {
+    bottom: -0.25em;
+}
+h1{
+	font-size:2em;
+}
+h2{
+	font-size:1.5em;
+}
+h3{
+	font-size:1.17em;
+}
+h4{
+	font-size:1em;
+}
+h5{
+	font-size:0.83em;
+}
+h6{
+	font-size:0.75em;
+}
+
+iframe {
+	display : block ;
+}
+p {
+	word-wrap:break-word;
+}
+strong ,b {
+	font-weight:bold;
+}
+small {
+    font-size: 75%;
+}
+/*Improves readability of pre-formatted text in all browsers.*/
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+textarea{
+	resize:none;
+	font-family:"Microsoft Yahei";
+	border:1px solid #ccc;
+	padding:5px;
+	font-size:12px;
+}
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+ 
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+input[type="text"],input[type="password"]{
+	padding:3px 5px;
+	border:1px solid #ccc;
+	height:20px;
+	font-size:12px;
+}
+select{
+	font-size:12px;
+}

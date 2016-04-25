@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />
+<meta name="renderer" content="webkit"> 
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<title></title>
+<link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="public/img/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="public/css/all.min.css"/>
+</head>
+<body class="user-body">
+
+	<div class="main">
+		<div class="header">
+			<div class="clearfix">
+				<div class="f-left">
+					<a class="logo">
+						<img src="public/img/logo.png">
+					</a>
+				</div>
+				<div class="f-right">
+					<div id="isLoginPanel">
+					
+					</div>
+				</div>
+				<div class="f-right">
+					<ul>
+						<li class="selected">
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a onclick="toMyOrder()">我的找货单</a>
+						</li>
+						<li>
+							<a href="merchant.html">商户入口</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="userinfo">
+				<div class="t-center">
+					<table>
+						<tr>
+							<td>
+								<img src="test/avatar2.jpg">
+							</td>
+							<td>
+								<p><span class="fs16 black">李女士</span>&ensp;商家</p>
+								<p>广东 深圳 宝安区</p>
+								<p><i class="yellow icon-06"></i>&ensp;已认证</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<ul class="clearfix">
+					<li class="selected" onclick="showContent(this)">接单记录</li>
+					<li onclick="showContent(this)">账号管理</li>
+				</ul>
+			</div>
+			<div>
+				<div class="content1">
+					<br><br>
+					<p class="timetext">接单时间 2016-4-12</p>
+					<div id="wookmarkContainer">
+						<div>
+							<ul class="clearfix">
+							
+							</ul>
+						</div>
+					</div>
+					<div>
+						<a class="btn loadBtn" onclick="loadMore()">查看更多...</a>
+					</div>
+				</div>
+				<div class="content2" style="display:none">
+					<form>
+						<table>
+							<tr>
+								<td class="t-right" width="32%">*商户名</td>
+								<td width="300"><input type="text"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="t-right">*类型</td>
+								<td>
+									<div class="ui-select">
+										<select>
+											<option>门店</option>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="t-right">*主营品类</td>
+								<td colspan="2" id="typeContainer">
+									<a class="ui-btn3" onclick="showType()"><i class="icon-01"></i>添加品类</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="t-right">*风格</td>
+								<td colspan="2" id="styleContainer">
+									<a class="ui-btn3" onclick="showStyle()"><i class="icon-01"></i>添加风格</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="t-right">*经验</td>
+								<td>
+									<div class="ui-select">
+										<select>
+											<option>5年</option>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="t-right">*所在地</td>
+								<td colspan="2">
+									<div class="ui-select">
+										<select name="province" id="s1">
+											<option>省份</option>
+										</select>
+									</div>
+									<div class="ui-select">
+										<select name="city" id="s2">
+											<option>城市</option>
+										</select>
+									</div>
+									<div class="ui-select">
+										<select name="town" id="s3">
+											<option>地区</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="t-right">*详细地址</td>
+								<td colspan="2">
+									<input type="text">
+								</td>
+							</tr>
+							<tr>
+								<td class="t-right">*QQ号</td>
+								<td><input type="text"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="t-right">手机号</td>
+								<td><input type="text"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="solidline"></div>
+									<span>认证</span>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="t-right">相关证件</td>
+								<td colspan="2">
+									<div class="clearfix">
+										<div class="uploadBtn2">
+											<u>点击上传</u>
+											<span>营业执照</span>
+										</div>
+										<div id="uploadWrap">
+											<img onclick="openUploadFile()" id="uploadImg" data-pic="" src="../../public/img/icon/upload.jpg" style="width:100%"/> 
+										</div>
+										<input type="file" id="file" name="business_licenceFile" onchange="PreviewImage(this,'uploadImg','uploadWrap')" style="display:none">
+										<div class="uploadBtn2">
+											<u>点击上传</u>
+											<span>税务登记证</span>
+										</div>
+										<div class="uploadBtn2">
+											<u>点击上传</u>
+											<span>组织机构代码证</span>
+										</div>
+									</div>
+									<p class="red" style="margin-top:10px;">注：三证中至少上传其中一证才能申请认证</p>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<a class="btn ui-btn1">保存</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+		<div class="footer">
+			<p>&copy;2014-2016 chaodp.com All Rights Reserved.粤ICP备14077671号-1</p>
+		</div>
+	</div>
+
+<script type="text/template" id="template">
+{{for(var i=0;i<it.length;i++){}}
+<li class="grid-item">
+	<span class="numberBlock">求购10件</span>
+	<span class="btn ui-btn1" onclick="end(this)">结束</span>
+	<img src="{{=it[i].img}}" width="100%">
+	<div class="info">
+		<div class="clearfix">
+			<div class="f-left"><img src="test/avatar1.jpg"></div>
+			<div>
+				<div><span class="fs16 black">{{=it[i].name}}</span>&ensp;<span>{{=it[i].location}}</span></div>
+				<div class="clearfix"><span>1小时前发布</span><span class="f-right red">2人接单</span></div>
+			</div>
+		</div>
+		<p>{{=it[i].desc}}</p>
+	</div>
+</li>
+{{}}}
+</script>
+<script type="text/javascript" src="public/js/lib/jquery-1.12.3.min.js"></script>	
+<script type="text/javascript" src="public/js/lib/doT.min.js"></script>	
+<script type="text/javascript" src="public/js/lib/cookie.js"></script>
+<script type="text/javascript" src="public/js/plugin/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="public/js/plugin/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="public/js/lib/util.js"></script>	
+<script type="text/javascript" src="public/js/plugin/geo.js"></script>	
+<script type="text/javascript">
+var $container = $('#wookmarkContainer ul');
+
+$(function(){
+	
+	setup();
+	preselect('广东省');
+	document.getElementById("s2").value="深圳市";
+	change(2);
+	document.getElementById("s3").value="福田区";
+	
+	//判断是否登陆显示用户信息
+	isLoginPanel();
+	
+	$.ajax({
+		url:"test/data/index.json",
+		dataType:"json",
+		success:function(data){
+			tileCount=data.data.length;
+			var tpl=$("#template").html();
+			$("#wookmarkContainer ul").append(doT.template(tpl)(data.data));
+		    $container.imagesLoaded(function() {
+		        $container.masonry({
+		                itemSelector: '.grid-item',
+		                gutter: 20,
+		                isAnimated: true,
+		            });
+		     });
+		},
+		error:function(){
+			alert("error")
+		}
+	});
+	
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop();
+		var scrollHeight = $(document).height();
+		var windowHeight = $(this).height();
+		if(scrollTop + windowHeight == scrollHeight){
+			if(!$(".content1").is(":hidden")){
+				$(".loadBtn").click();
+			}
+		}
+	});
+	
+	
+})
+
+function loadMore(){
+	$.ajax({
+		url:"test/data/index.json",
+		dataType:"json",
+		success:function(data){
+			tileCount=data.data.length;
+			var tpl=$("#template").html();
+			var $items=$(doT.template(tpl)(data.data));
+		    $container.append( $items ).masonry( 'appended', $items );
+		},
+		error:function(){
+			alert("error")
+		}
+	})
+}
+
+function showContent(self){
+	var $self=$(self);
+	var i=$self.index()+1;
+	$self.addClass("selected").siblings().removeClass("selected");
+	$(".content"+i).show().siblings().hide();
+}
+
+function showType(){
+	var grayBg=$(".grayBg");
+	var body=$("body");
+	var typeWrap=$(".typeWrap");
+	var typeWrapHtml='<div class="typeWrap dialog"><div><i class="icon-02" onclick="hideDialog(this)"></i><h2>请选择您的主营品类</h2><div class="clearfix"><a onclick="selectType(this)">沙发</a><a onclick="selectType(this)">沙发</a><a onclick="selectType(this)">沙发</a><a onclick="selectType(this)">沙发</a><a onclick="selectType(this)">沙发</a><a onclick="selectType(this)">沙发</a><a onclick="selectType(this)">沙发</a><a onclick="selectType(this)">沙发</a></div></div></div>';
+	if(grayBg.length>0){
+		grayBg.show();
+	}else{
+		body.append("<div class='grayBg'></div>");
+	}
+	if(typeWrap.length>0){
+		typeWrap.show();
+	}else{
+		body.append(typeWrapHtml);
+	}
+}
+
+function selectType(self){
+	$(".typeWrap,.grayBg").remove();
+	var $self=$(self);
+	var html='<a class="typeitem">'+$self.text()+'<i class="icon-02" onclick="removeItem(this)"></i></a>';
+	$("#typeContainer").prepend(html);
+}
+
+function showStyle(){
+	var grayBg=$(".grayBg");
+	var body=$("body");
+	var styleWrap=$(".styleWrap");
+	var styleWrapHtml='<div class="styleWrap dialog"><div><i class="icon-02" onclick="hideDialog(this)"></i><h2>请选择您的主营风格</h2><div class="clearfix"><a onclick="selectStyle(this)">美式</a></div></div></div>';
+	if(grayBg.length>0){
+		grayBg.show();
+	}else{
+		body.append("<div class='grayBg'></div>");
+	}
+	if(styleWrap.length>0){
+		styleWrap.show();
+	}else{
+		body.append(styleWrapHtml);
+	}
+}
+
+function selectStyle(self){
+	$(".styleWrap,.grayBg").remove();
+	var $self=$(self);
+	var html='<a class="styleitem">'+$self.text()+'<i class="icon-02" onclick="removeItem(this)"></i></a>';
+	$("#styleContainer").prepend(html);
+}
+
+function removeItem(self){
+	$(self).parent().remove();
+}
+</script>
+</body>
+</html>

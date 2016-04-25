@@ -1,0 +1,595 @@
+/*
+	index.html
+*/
+.index-body{
+	background:#fff;
+}
+.banner{
+	position:relative;
+}
+.uploadTip{
+	position:absolute;
+	bottom:-128px;
+	width:192px;
+	left:50%;
+	margin-left:-96px;
+	text-align:right;
+	font-size:14px;
+	color:#D2D2D2;
+}
+#uploadBlock{
+	width:192px;
+	height:192px;
+	box-shadow:0 0 3px #000;
+	position:absolute;
+	bottom:-96px;
+	left:50%;
+	margin-left:-96px;
+	box-shadow:0 -8px 30px #9b9b9b;
+	text-align:center;
+	cursor:pointer;
+}
+#uploadBlock>span{
+	display:block;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.5;
+}
+#uploadBlock>div{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	z-index:2;
+	color:#fff;
+	font-size:14px;
+}
+#uploadBlock>div p{
+	line-height:24px;
+}
+#uploadBlock>div p:first-child{
+	font-size: 46px;
+    margin-top: 48px;
+}
+.index-body .newcomer{
+	text-align:center;
+	height:280px;
+}
+.index-body .newcomer h2{
+	font-size:30px;
+	color:#999999;
+}
+.index-body .newcomer p{
+	margin:18px 0;
+	font-size:14px;
+	color:#D2D2D2;
+}
+.index-body .newcomer img{
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	margin:0 5px;
+}
+#wookmarkContainer{
+	width:1040px;
+	margin:0 auto;
+}
+#wookmarkContainer>div{
+	position:relative;
+}
+#wookmarkContainer li{
+	border:1px solid #E0E0E0;
+	border-radius:5px;
+	box-shadow:0 0 3px #ccc;
+	overflow:hidden;
+	width:242px;
+	float:left;
+	margin-bottom: 20px;
+	cursor:pointer;
+}
+#wookmarkContainer li:hover{
+	box-shadow:0 0 3px #6078EA;
+	border:1px solid #6078EA;
+}
+#wookmarkContainer .ui-btn1{
+	position:absolute;
+	top:-6px;
+	right:15px;
+	font-size:14px;
+	display:none;
+}
+#wookmarkContainer li:hover .ui-btn1{
+	display:block;
+}
+#wookmarkContainer .numberBlock{
+	line-height:26px;
+	font-size:14px;
+	padding:0 15px;
+	position:absolute;
+	display:block;
+	top:15px;
+	left:15px;
+	background:#BCBBB8;
+	color:#fff;
+	border-radius:30px;
+}
+#wookmarkContainer .info{
+	padding:12px;
+	color:#B2B2B2;
+}
+#wookmarkContainer .info img{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	margin-right:12px;
+}
+#wookmarkContainer .info p{
+	border-top:1px solid #B2B2B2;
+	padding-top:12px;
+	margin-top:12px;
+	text-align:left;
+}
+/*
+	merchant.html
+*/
+.merchant-body{
+	background:#fff;
+}
+.merchant-body .header{
+	border-bottom:1px solid #CCCCCC;
+}
+
+/*
+	user.html
+*/
+.user-body .timetext{
+	width:1040px;
+	margin:15px auto;
+	font-size:14px;
+	color:#999;
+}
+.user-body .userinfo{
+	background:#F0F0F0;
+	height:240px;
+	position:relative;
+	color:#999999
+}
+.user-body .userinfo ul{
+	position:absolute;
+	bottom:0;
+	width:290px;
+	left:50%;
+	margin-left:-145px;
+}
+.user-body .userinfo ul li{
+	float:left;
+	font-size:18px;
+	width:145px;
+	text-align:center;
+	border-bottom:3px solid #F0F0F0;
+	padding-bottom:13px;
+	cursor:pointer;
+}
+.user-body .userinfo ul li.selected{
+	border-bottom:3px solid #EE8582;
+	color:#EE8582;
+}
+.user-body .userinfo table{
+	display:inline-block;
+	margin-top:55px;
+}
+.user-body .userinfo img{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	margin-right:12px;
+}
+.user-body .userinfo p{
+	margin:5px 0;
+	text-align:left; 
+	font-size:14px;
+}
+.user-body .content2 form{
+	width:1040px;
+	margin:0 auto;
+	padding:30px;
+}
+.user-body .content2 form table{
+	width:100%;
+}
+.user-body .content2 td{
+	padding:10px;
+	font-size:14px;
+}
+.user-body .content2 td.t-right{
+	color:#999;
+}
+.user-body .content2 input{
+	padding:5px;
+	width:280px;
+}
+.user-body .content2 .solidline{
+	top:12px;
+	width:292px;
+}
+.user-body .content2 .solidline+span{
+	width:50px;
+	position:relative;
+	margin:0 auto;
+	background:#fff;
+	display:block;
+	text-align:center;
+	color:#999;
+}
+.user-body .content2 .ui-btn3{
+	display:inline-block;
+	width:140px;
+	margin:5px 10px 5px 0;
+	line-height:40px;
+}
+.user-body .content2 .ui-btn1{
+	margin:0;
+	line-height:40px;
+	width:100%;
+}
+.user-body .content2 .uploadBtn+p{
+	margin-top:10px;
+}
+.user-body .uploadBtn2{
+	position:relative;
+	float:left;
+	margin-right:12px;
+	line-height:150px;
+}
+.user-body .uploadBtn2 span{
+	display:block;
+	color:#fff;
+	position:absolute;
+	width:100%;
+	bottom:0;
+	line-height:36px;
+	background:#7F7F7F;
+}
+.typeWrap,.styleWrap{
+	top:33%;
+}
+.typeWrap a,.styleWrap a{
+	display:block;
+	float:left;
+	margin:10px;
+	font-size:16px;
+	padding:0 10px;
+}
+.user-body .typeitem,.user-body .styleitem{
+	display:block;
+	float:left;
+	margin-right:10px;
+	line-height: 40px;
+	border: 1px solid #ccc;
+	width:140px;
+	text-align:center;
+	border-radius:4px;
+	position:relative;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.user-body .typeitem i,.user-body .styleitem i{
+	position:absolute;
+	right:8px;
+}
+/*
+	接单弹出框
+*/
+.takeOrderWrap{
+	height:400px;
+	margin-top:-200px;
+	width:660px;
+	margin-left:-330px;
+}
+.takeOrderWrap>div{
+	padding:0;
+}
+.takeOrderWrap>div>div>div{
+	height:400px;
+	position:relative;
+}
+.takeOrderWrap>div>div>div:first-child{
+	width:270px;
+	border-right:1px solid #ccc;
+	padding:0 45px; 
+}
+.takeOrderWrap .uploadBtn{
+	width:260px;
+	height:260px;
+	margin:10px auto;
+	line-height:30px;
+	font-size:14px;
+	color:#999;
+}
+.takeOrderWrap .uploadBtn i{
+	font-size:50px;
+}
+.takeOrderWrap .uploadBtn>p:first-child{
+	padding-top:80px;
+	margin-bottom:5px;
+}
+.takeOrderWrap ul{
+	
+}
+.takeOrderWrap li{
+	float:left;
+	width:76px;
+	text-align:center;
+	border-bottom:3px solid #fff;
+	padding-bottom:5px;
+	cursor:pointer;
+	font-size: 14px;
+	color:#999;
+}
+.takeOrderWrap li.selected{
+	border-bottom:3px solid #FF7469;
+	color:#FF7469
+}
+.takeOrderWrap p{
+	margin:8px 0 18px 0;
+	color:#999;
+}
+.takeOrderWrap .ui-btn1{
+	border-radius: 0;
+    bottom: -20px;
+    line-height: 50px;
+    position: absolute;
+    width: 297px;
+}
+.takeOrderWrap .ui-check{
+	margin:0 auto;
+}
+/*
+	下单弹出框
+*/
+.placeOrderWrap{
+	height:400px;
+	margin-top:-200px;
+	width:660px;
+	margin-left:-330px;
+}
+.placeOrderWrap>div{
+	padding:0;
+}
+.placeOrderWrap>div>div>div{
+	height:400px;
+	position:relative;
+}
+.placeOrderWrap>div>div>div:first-child{
+	width:270px;
+	border-right:1px solid #ccc;
+	padding:0 45px; 
+}
+.placeOrderWrap .previewImg{
+	width:260px;
+	height:260px;
+	margin:10px auto;
+}
+.placeOrderWrap .numberWrap{
+	border:1px solid #ccc;
+	width:166px;
+	height:28px;
+	border-radius:30px;
+	overflow:hidden;
+	margin-bottom:10px;
+	font-size:0;
+}
+.placeOrderWrap .numberWrap input{
+	border:none;
+	width:44px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	height:22px;
+}
+.placeOrderWrap .numberWrap a{
+	display:inline-block;
+	vertical-align:middle;
+	width:55px;
+	text-align:center;
+	font-size:20px;
+	color:#999;
+}
+.placeOrderWrap p{
+	margin:8px 0 18px 0;
+	color:#999;
+}
+.placeOrderWrap .ui-btn1{
+	border-radius: 0;
+    bottom: -20px;
+    line-height: 50px;
+    position: absolute;
+    width: 297px;
+}
+.placeOrderWrap .ui-check{
+	margin:0 auto;
+}
+.placeOrderWrap .kefu{
+	width:200px;
+	margin:0 auto;
+}
+.placeOrderWrap .kefu p{
+	margin:0;
+}
+.placeOrderWrap .kefu p:first-child{
+	padding-top:5px;
+}
+/*
+	看单弹出框
+*/
+.orderDetailWrap.dialog{
+	width:788px;
+	margin-left:-394px;
+	background:none;
+	box-shadow:none;
+	min-height:450px;
+	top:20%;
+	margin-top:0;
+}
+.orderDetailWrap>div{
+	padding:0;
+}
+.orderDetailWrap>div>div>div{
+	background:#fff;
+	padding:22px;
+	width:366px;
+	min-height:406px;
+	position:relative;
+}
+.orderDetailWrap>div>div>div:first-child{
+	width:316px;
+}
+.orderDetailWrap p{
+	color:#999;
+}
+.orderDetailWrap .linkman {
+	margin-bottom:35px;
+}
+.orderDetailWrap .linkman p:first-child{
+	padding-top:6px;
+}
+.orderDetailWrap .linkman img{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	margin-right:10px;
+}
+.orderDetailWrap .previewImg{
+	position:relative;
+	width:260px;
+	height:260px;
+	overflow:hidden;
+	margin:0 auto;
+}
+.orderDetailWrap .previewImg .numberBlock,.orderDetailWrap #detailDesc .numberBlock{
+	line-height:26px;
+	font-size:14px;
+	padding:0 15px;
+	position:absolute;
+	display:block;
+	top:15px;
+	left:15px;
+	background:#BCBBB8;
+	color:#fff;
+	border-radius:30px;
+}
+.orderDetailWrap .previewImg+p{
+	width:260px;
+	margin:12px auto;
+}
+.orderDetailWrap .contactBtn,.orderDetailWrap  .closeBtn{
+	position:absolute;
+	right:22px;
+	top:0;
+	width:78px;
+	font-size:13px;
+	line-height:30px;
+}
+.orderDetailWrap li{
+	cursor:pointer;
+}
+.orderDetailWrap li table{
+	width:100%;
+}
+.orderDetailWrap li td{
+	padding:5px;
+	font-size:14px;
+}
+.orderDetailWrap .imgBlock{
+	position:relative;
+	width:96px;
+	height:96px;
+}
+.orderDetailWrap .imgBlock img{
+	width:100%;
+	height:100%;
+}
+.orderDetailWrap .imgBlock span,.orderDetailWrap .imgBlock a{
+	display:block;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:24px;
+	background:#000;
+	opacity:0.4;
+}
+.orderDetailWrap .imgBlock a{
+	text-align:center;
+	color:#fff;
+	background:none;
+	z-index:22;
+	font-size:12px;
+	opacity:1;
+	line-height:24px;
+}
+.orderDetailWrap td .ui-btn1{
+	font-size:12px;
+	padding:0 5px;
+	line-height:22px
+}
+.orderDetailWrap #detailDesc .backBtn{
+	font-size:16px;
+}
+.orderDetailWrap #detailDesc .imgBlock2{
+	width:190px;
+	height:190px;
+	margin:22px auto;
+	position:relative;
+}
+.orderDetailWrap #detailDesc .imgBlock2 img{
+	width:100%;
+}
+.orderDetailWrap #detailDesc p{
+	font-size:14px;
+	margin-top:5px;
+}
+.orderDetailWrap #closeConfirm{
+	background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    padding: 12px 18px;
+    position: absolute;
+    right: 22px;
+    top: 70px;
+    width: 210px;
+    z-index: 222;
+    border-radius:4px;
+    box-shadow:0 0 3px #ccc;
+}
+.orderDetailWrap #closeConfirm a{
+	font-size:14px;
+	color:#999;
+	margin-right:5px;
+	line-height:24px;
+}
+.orderDetailWrap #closeConfirm a:first-child{
+	padding:0 10px;
+	background:#EE8582;
+	color:#fff;
+	display:inline-block;
+	border-radius:4px;
+}
+.orderDetailWrap #closeConfirm .arrow{
+	position:absolute;
+	right: 31px;
+    top: -11px;
+}
+.orderDetailWrap #closeConfirm .arrow span{
+	display:block;
+	position:absolute;
+	border-bottom: 10px solid #fff;
+	top:2px;
+}
+.orderDetailWrap #closeConfirm .arrow span:first-child{
+	border-bottom: 10px solid #ccc;
+	top:0;
+}
+.orderDetailWrap #closeConfirm h3{
+	font-size:16px;
+	margin-bottom:10px;
+	margin-top:10px;
+}

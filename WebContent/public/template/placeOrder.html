@@ -1,0 +1,57 @@
+<div class="placeOrderWrap dialog">
+	<div>
+		<i class="icon-02" onclick="hideDialog(this)"></i>
+		<div class="clearfix">
+			<div class="f-left">
+				<div>
+					<br>
+					<div class="previewImg">
+						<img class="main_image" src="{{=it.imgurl}}" width="100%">
+					</div>
+					<div class="clearfix">
+						<div class="f-left" style="color:#999;margin-top:9px;">找货数量</div>
+						<div class="f-right numberWrap" style="margin-top:5px;">
+							<a onclick="plusNum(this)">+</a>
+							<input class="t-center buy_num" type="text" value="1" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
+							<a onclick="minusNum(this)">-</a>
+						</div>
+					</div>
+					<div>
+						<input type="text" class="description" placeholder="点击这里写上要求，如：尺寸、材质等..." style="border:none;width:100%;cursor:pointer">
+					</div>
+				</div>
+			</div>
+			<div class="f-left" style="width:299px">
+				<div>
+					<br><br><br>
+					<div class="clearfix">
+						<div class="ui-check is_show_qq">
+							<span class="checked" onclick="toggleCheck(this)" data-val="0">显示QQ</span>
+							<span onclick="toggleCheck(this)" data-val="1">不显示</span>
+						</div>
+					</div>
+					<p class="t-center">在找货单中显示QQ以便商家主动找你</p>
+					<div class="clearfix">
+						<div class="ui-check is_server">
+							<span class="checked" onclick="toggleCheck(this)" data-val="0">委托客服</span>
+							<span onclick="toggleCheck(this)" data-val="1">不需要</span>
+						</div>
+					</div>
+					<p class="t-center">一键发布全网及各大软装资源Q群</p>
+					<div class="clearfix kefu">
+						<div class="f-left">
+							<img src="public/img/kefu.jpg" width="66">
+						</div>
+						<div>
+							<p>客服免费提供找货服务</p>
+							<p>周一至周五09:00-19:00</p>
+							<p>QQ173277021</p>
+						</div>
+					</div>
+					
+					<a class="ui-btn1" onclick="publish()">发布</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

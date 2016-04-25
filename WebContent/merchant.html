@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />
+<meta name="renderer" content="webkit"> 
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<title></title>
+<link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="public/img/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="public/css/all.min.css"/>
+</head>
+<body class="merchant-body">
+
+	<div class="main">
+		<div class="header">
+			<div class="clearfix">
+				<div class="f-left">
+					<a class="logo">
+						<img src="public/img/logo.png">
+					</a>
+				</div>
+				<div class="f-right">
+					<div id="isLoginPanel">
+					
+					</div>
+				</div>
+				<div class="f-right">
+					<ul>
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a onclick="toMyOrder()">我的找货单</a>
+						</li>
+						<li class="selected">
+							<a href="merchant.html">商户入口</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<br><br>
+			<div id="wookmarkContainer">
+				<div>
+					<ul class="clearfix">
+					
+					</ul>
+				</div>
+			</div>
+			<div>
+				<a class="btn loadBtn" onclick="loadMore()">查看更多...</a>
+			</div>
+		</div>
+		<div class="footer">
+			<p>&copy;2014-2016 chaodp.com All Rights Reserved.粤ICP备14077671号-1</p>
+		</div>
+	</div>
+
+<script type="text/template" id="template">
+{{for(var i=0;i<it.length;i++){}}
+<li class="grid-item">
+	<span class="numberBlock">求购10件</span>
+	<span class="btn ui-btn1" onclick="provide(this)">我能供货</span>
+	<img src="{{=it[i].img}}" width="100%">
+	<div class="info">
+		<div class="clearfix">
+			<div class="f-left"><img src="test/avatar1.jpg"></div>
+			<div>
+				<div><span class="fs16 black">{{=it[i].name}}</span>&ensp;<span>{{=it[i].location}}</span></div>
+				<div class="clearfix"><span>1小时前发布</span><span class="f-right red">2人接单</span></div>
+			</div>
+		</div>
+		<p>{{=it[i].desc}}</p>
+	</div>
+</li>
+{{}}}
+</script>
+<script type="text/javascript" src="public/js/lib/jquery-1.12.3.min.js"></script>	
+<script type="text/javascript" src="public/js/lib/doT.min.js"></script>	
+<script type="text/javascript" src="public/js/lib/cookie.js"></script>
+<script type="text/javascript" src="public/js/plugin/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="public/js/plugin/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="public/js/lib/util.js"></script>	
+<script type="text/javascript">
+var $container = $('#wookmarkContainer ul');
+$(function(){
+	
+	//判断是否登陆显示用户信息
+	isLoginPanel();
+	
+	$.ajax({
+		url:"test/data/index.json",
+		dataType:"json",
+		success:function(data){
+			tileCount=data.data.length;
+			var tpl=$("#template").html();
+			$("#wookmarkContainer ul").append(doT.template(tpl)(data.data));
+		    $container.imagesLoaded(function() {
+		        $container.masonry({
+		                itemSelector: '.grid-item',
+		                gutter: 20,
+		                isAnimated: true,
+		            });
+		     });
+		},
+		error:function(){
+			alert("error")
+		}
+	});
+	
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop();
+		var scrollHeight = $(document).height();
+		var windowHeight = $(this).height();
+		if(scrollTop + windowHeight == scrollHeight){
+		　　　　$(".loadBtn").click();
+		}
+	});
+	
+	
+})
+
+function loadMore(){
+	$.ajax({
+		url:"test/data/index.json",
+		dataType:"json",
+		success:function(data){
+			tileCount=data.data.length;
+			var tpl=$("#template").html();
+			var $items=$(doT.template(tpl)(data.data));
+		    $container.append( $items ).masonry( 'appended', $items );
+		},
+		error:function(){
+			alert("error")
+		}
+	})
+}
+
+function provide(self){
+	if(true){
+		showLogin();
+	}else{
+		
+	}
+}
+
+</script>
+</body>
+</html>
